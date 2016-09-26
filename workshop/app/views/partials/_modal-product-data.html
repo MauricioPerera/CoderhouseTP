@@ -1,0 +1,28 @@
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="productModalLabel">Produto:{{producto.title}}</h4>
+      </div>
+      <div class="modal-body">
+
+      <p>
+        Producto: {{producto.title}} ( {{producto.id}} ).
+      </p>
+
+      <p>
+        Imágenes:
+      </p>
+      <div ui-view="carusel"></div>
+      <p>
+        Costo: {{producto.price | myCurrency : producto.currency_id}}.
+      </p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
